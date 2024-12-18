@@ -1,0 +1,103 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --todo-bg: #f9f9f9;
+    --button-bg: #ddd;
+}
+
+.dark-mode {
+    --bg-color: #202c37;
+    --text-color: #f9f9f9;
+    --todo-bg: #333;
+    --button-bg: #555;
+}
+
+.app {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: var(--todo-bg);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.todo-input {
+    margin: 10px 0;
+}
+
+#new-todo {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.todo-list {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-item.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+button {
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #aaa;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.filters button.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--text-color);
+}
